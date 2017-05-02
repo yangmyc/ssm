@@ -5,10 +5,12 @@
 
 <generatorConfiguration>
   <context id="DB2Tables" targetRuntime="MyBatis3">
-  
+  	<commentGenerator>
+  		<property name="suppressAllComments" value="true" />
+	</commentGenerator>
   <!-- 配置数据库连接 -->
-    <jdbcConnection driverClass="com.mysql.jdbc.driver"
-        connectionURL="jdbc:mysql://localhost:3306/ssm"
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+        connectionURL="jdbc:mysql://localhost:3306/test"
         userId="root"
         password="myc1876">
     </jdbcConnection>
@@ -38,7 +40,7 @@
     </javaClientGenerator>
 
 	<!-- table指定每个表生成策略 -->
-    <table tableName="tbl_emp" domainObjectName="Emplyee"></table>
-	<table tableName="tbl_dept" domainObjectName="Department"></table>
+    <table tableName="tab_emp" domainObjectName="Emplyee"></table>
+	<table tableName="tab_dept" domainObjectName="Department"></table>
   </context>
 </generatorConfiguration>
